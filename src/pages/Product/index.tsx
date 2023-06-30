@@ -12,10 +12,9 @@ const Product = () => {
               <Link to={`/product/${data.id}`}>
                 <img src={data.img} alt={data.img} />
               </Link>
-              <div className="flex flex-col">
-                <p>id:{data.id}</p>
-                <p>des:{data.description}</p>
-                <p>pri:{data.price}</p>
+              <div className="flex items-center flex-col">
+                <p>{data.description}</p>
+                <p>{data.price}원</p>
               </div>
             </div>
           ))}
