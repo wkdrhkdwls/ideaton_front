@@ -12,14 +12,14 @@ const Header = () => {
     <nav className="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 xl:px-20 md:px-10">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center">
-          <span className="lg:text-7xl text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className=" text-2xl font-semibold whitespace-nowrap dark:text-white">
             진경옥몰
           </span>
         </a>
         <button
           onClick={toggleMenu}
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 ml-3 text-sm text-black rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200   dark:focus:ring-gray-600"
           aria-controls="navbar-hamburger"
           aria-expanded={isMenuOpen ? "true" : "false"}
         >
@@ -41,56 +41,57 @@ const Header = () => {
           className={`w-full ${isMenuOpen ? "" : "hidden"}`}
           id="navbar-hamburger"
         >
-          <ul className="flex flex-col font-medium mt-4  bg-[#D3D3D3]">
-            <div className="flex flex-row  text-center">
+          <ul className="flex flex-col font-medium mt-4  bg-gray-800 lg:flex-row xl:flex-row lg:text-2xl xl:text-2xl lg:justify-between xl:justify-between lg:bg-gray-800 xl:bg-gray-800">
+            <li>
               <Link
                 to="/login"
-                className="w-1/2 h-14 hover:text-white hover:bg-gray-700 "
+                className="block py-2 pl-3 pr-4 rounded   dark:hover:bg-gray-400 hover:text-white "
               >
-                <button className="mt-3">로그인</button>
+                로그인
               </Link>
+            </li>
+            <li>
               <Link
                 to="/signup"
-                className="w-1/2 h-14 hover:text-white hover:bg-gray-700 "
+                className="block py-2 pl-3 pr-4 rounded dark:hover:bg-gray-400 hover:text-white "
               >
-                <button className="mt-3">회원가입</button>
+                회원가입
               </Link>
-            </div>
-            <div>
-              <li>
-                <Link
-                  to="#"
-                  className="block py-2 pl-3 pr-4 rounded hover:bg-gray-100  dark:hover:bg-gray-700 hover:text-white "
-                >
-                  구매하기
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100  dark:hover:bg-gray-700 hover:text-white"
-                >
-                  정기배송신청하기
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100  dark:hover:bg-gray-700 hover:text-white"
-                >
-                  이달의원료
-                </Link>
-              </li>
+            </li>
 
-              <li>
-                <Link
-                  to="#"
-                  className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100  dark:hover:bg-gray-700 hover:text-white"
-                >
-                  EVENT
-                </Link>
-              </li>
-            </div>
+            <li>
+              <Link
+                to="#"
+                className="block py-2 pl-3 pr-4 rounded dark:hover:bg-gray-400 hover:text-white "
+              >
+                구매하기
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="#"
+                className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100  dark:hover:bg-gray-400 hover:text-white"
+              >
+                정기배송신청하기
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="#"
+                className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100  dark:hover:bg-gray-400 hover:text-white"
+              >
+                이달의원료
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="#"
+                className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100  dark:hover:bg-gray-400 hover:text-white"
+              >
+                EVENT
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
