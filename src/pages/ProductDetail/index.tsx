@@ -3,6 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { useParams } from "react-router-dom";
 import React, { useState } from "react";
+import OrderForm from "@components/Order/order";
 
 const renderSlides = dummy.map((data) => (
   <div key={data.id}>
@@ -79,6 +80,9 @@ const ProductDetail: React.FC = () => {
           <button className="w-1/3 border-2 border-black p-6 rounded-xl">
             정기배송안함
           </button>
+        </div>
+        <div>
+          <OrderForm />
         </div>
       </div>
     </div>
