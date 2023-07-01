@@ -33,9 +33,9 @@ const ProductDetail: React.FC = () => {
 
   return (
     <div>
-      <div className="">
-        <div className="flex flex-row sm:flex-col justify-evenly h-screen mt-10 sm:mt-0">
-          <div className="w-full sm:w-full sm:justify-center md:w-[450px] lg:w-[550px] xl:w-[600px] ">
+      <div className="lg:w-2/3 lg:mx-auto xl:w-2/3 xl:mx-auto">
+        <div className="flex flex-row sm:flex-col md:flex-col  h-screen mt-40  lg:mt-20 xl:mt-40   sm:items-center md:items-center">
+          <div className="w-full sm:w-2/3 sm:mb-10 md:mb-10 md:w-[450px] lg:w-[550px] lg:mr-20 xl:w-[600px] xl:mr-20 ">
             <Carousel
               showArrows={true}
               autoPlay={true}
@@ -59,10 +59,26 @@ const ProductDetail: React.FC = () => {
             </span>
           </div>
         </div>
-        <div>
-          <button>선물포장</button>
-          <button>일반포장</button>
-          <button>일반구매</button>
+        <div className="flex justify-between mb-10">
+          <button className="w-1/3 border-2 border-black p-6 rounded-xl">
+            선물포장
+          </button>
+          <button className="w-1/3 border-2 border-black p-6 rounded-xl">
+            에코포장
+          </button>
+        </div>
+        <div className="mb-10">
+          <button className="w-1/3 border-2 border-black p-6 rounded-xl">
+            수량
+          </button>
+        </div>
+        <div className="flex justify-between mb-10">
+          <button className="w-1/3 border-2 border-black p-6 rounded-xl">
+            정기배송
+          </button>
+          <button className="w-1/3 border-2 border-black p-6 rounded-xl">
+            정기배송안함
+          </button>
         </div>
       </div>
     </div>
