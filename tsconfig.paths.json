@@ -6,7 +6,8 @@
       "@hooks/*": ["./hooks/*"],
       "@pages/*": ["./pages/*"],
       "@reducer/*": ["./reducer/*"],
-      "@store/*": ["./store/*"]
+      "@store/*": ["./store/*"],
+      "@assets/*": ["./assets/*"]
     }
   }
 }
