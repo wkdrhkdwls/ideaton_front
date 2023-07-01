@@ -41,7 +41,7 @@ const Header = () => {
           className={`w-full ${isMenuOpen ? "" : "hidden"}`}
           id="navbar-hamburger"
         >
-          <ul className="flex flex-col font-medium mt-4  bg-gray-800 lg:flex-row xl:flex-row lg:text-2xl xl:text-2xl lg:justify-between xl:justify-between lg:bg-gray-800 xl:bg-gray-800">
+          <ul className="flex flex-col font-medium mt-4  bg-gray-800 lg:flex-row xl:flex-row lg:text-2xl xl:text-2xl lg:justify-between xl:justify-between lg:bg-gray-800 xl:bg-gray-800 lg:text-white xl:text-white">
             <li>
               <Link
                 to="/login"
