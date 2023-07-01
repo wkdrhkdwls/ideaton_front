@@ -7,7 +7,8 @@ const useProductDetail = [
   {
     id: 1,
     img: Img1,
-    description: "1번 상품입니다.",
+    title: "진경옥 15ml * 30",
+    description: "시간과 전통의 가치를 담아 삶에 건강을 더하다",
     price: 20000,
   },
   {

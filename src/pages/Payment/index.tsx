@@ -10,7 +10,7 @@ function Payment() {
 
     /* 2. 결제 데이터 정의하기 */
     const data: RequestPayParams = {
-      pg: "kcp", // PG사 : https://portone.gitbook.io/docs/sdk/javascript-sdk/payrq#undefined-1 참고
+      pg: "kakaopay", // PG사 : https://portone.gitbook.io/docs/sdk/javascript-sdk/payrq#undefined-1 참고
       pay_method: "card", // 결제수단
       merchant_uid: `mid_${new Date().getTime()}`, // 주문번호
       amount: 1000, // 결제금액
@@ -32,6 +32,7 @@ function Payment() {
 
     if (success) {
       alert("결제 성공");
+      console.log(response);
     } else {
       alert(`결제 실패: ${error_msg}`);
     }
