@@ -9,6 +9,7 @@ const Home = loadable(() => import("@pages/Home"));
 const LogIn = loadable(() => import("@pages/LogIn"));
 const SignUp = loadable(() => import("@pages/SignUp"));
 const Product = loadable(() => import("@pages/Product"));
+const Auth = loadable(() => import("@pages/Auth"));
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/pay" element={<Payment />} />
+        <Route path="/auth" element={<Auth />} />
       </Routes>
     </Layout>
   );
