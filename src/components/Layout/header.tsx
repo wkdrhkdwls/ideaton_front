@@ -1,8 +1,13 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Sidebar from "./sidebar";
+import { FaGripVertical } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const toggleSide = () => {
+    setIsSidebarOpen(true);
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,83 +22,15 @@ const Header = () => {
           </span>
         </a>
         <button
-          onClick={toggleMenu}
+          onClick={toggleSide}
           type="button"
           className="inline-flex items-center p-2 ml-3 text-sm text-black rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200   dark:focus:ring-gray-600"
           aria-controls="navbar-hamburger"
           aria-expanded={isMenuOpen ? "true" : "false"}
         >
-          <svg
-            className="w-6 h-6"
-            aria-hidden="true"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
+          <FaGripVertical size={24} />
         </button>
-        <div
-          className={`w-full ${isMenuOpen ? "" : "hidden"}`}
-          id="navbar-hamburger"
-        >
-          <ul className="flex flex-col font-medium mt-4  bg-gray-800 lg:flex-row xl:flex-row lg:text-2xl xl:text-2xl lg:justify-between xl:justify-between lg:bg-gray-800 xl:bg-gray-800 lg:text-white xl:text-white">
-            <li>
-              <Link
-                to="/login"
-                className="block py-2 pl-3 pr-4 rounded   dark:hover:bg-gray-400 hover:text-white "
-              >
-                로그인
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/signup"
-                className="block py-2 pl-3 pr-4 rounded dark:hover:bg-gray-400 hover:text-white "
-              >
-                회원가입
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to="#"
-                className="block py-2 pl-3 pr-4 rounded dark:hover:bg-gray-400 hover:text-white "
-              >
-                구매하기
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="#"
-                className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100  dark:hover:bg-gray-400 hover:text-white"
-              >
-                정기배송신청하기
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="#"
-                className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100  dark:hover:bg-gray-400 hover:text-white"
-              >
-                이달의원료
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to="#"
-                className="block py-2 pl-3 pr-4  rounded hover:bg-gray-100  dark:hover:bg-gray-400 hover:text-white"
-              >
-                EVENT
-              </Link>
-            </li>
-          </ul>
-        </div>
+        <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
       </div>
     </nav>
   );
