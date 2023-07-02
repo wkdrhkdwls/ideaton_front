@@ -20,6 +20,7 @@ function Payment() {
       buyer_email: "example@example", // 구매자 이메일
       buyer_addr: "신사동 661-16", // 구매자 주소
       buyer_postcode: "06018", // 구매자 우편번호
+      m_redirect_url: "http://localhost:8080/orderCompleteMobile",
     };
 
     /* 4. 결제 창 호출하기 */
@@ -38,7 +39,14 @@ function Payment() {
     }
   }
 
-  return <button onClick={onClickPayment}>결제하기</button>;
+  return (
+    <button
+      onClick={onClickPayment}
+      className=" my-20 border-2 border-black p-6 rounded-xl"
+    >
+      결제하기
+    </button>
+  );
 }
 
 export default Payment;

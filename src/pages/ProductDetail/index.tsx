@@ -4,6 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import { useParams } from "react-router-dom";
 import React, { useState } from "react";
 import OrderForm from "@components/Order/order";
+import { Link } from "react-router-dom";
 
 const renderSlides = dummy.map((data) => (
   <div key={data.id}>
@@ -83,6 +84,13 @@ const ProductDetail: React.FC = () => {
         </div>
         <div>
           <OrderForm />
+        </div>
+        <div>
+          <Link to="/pay">
+            <button className="w-1/3 border-2 border-black p-6 rounded-xl">
+              결제하기
+            </button>
+          </Link>
         </div>
       </div>
     </div>
