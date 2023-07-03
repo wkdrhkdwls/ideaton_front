@@ -1,16 +1,15 @@
 import dummy, { CouponSales, PackageSales } from "../../dummy";
-import { useParams } from "react-router-dom";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import CarouselComponent from "@components/Carousel/carouselComponent";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 
-interface Product {
-  id: number;
-  img: string;
-  title?: string;
-  description?: string;
-  price: number;
+interface PaymentState {
+  quantity: number;
+  totalAmount: number;
+  productTitle: string | undefined;
+  img: any;
+  package: string | undefined;
 }
 
 const ProductDetail: React.FC = () => {
@@ -85,6 +84,14 @@ const ProductDetail: React.FC = () => {
     quantity * product.price +
     (selectedPackage === "gift" ? PackageSales.gift : PackageSales.eco) -
     product.price * 0.01 * totalDiscount;
+  // 값을 넘겨주는것은 아래 state에다가 추가하면된다.
+  const state: PaymentState = {
+    img: product.img,
+    productTitle: product.title,
+    quantity: quantity,
+    package: selectedPackage,
+    totalAmount: totalAmount,
+  };
 
   if (!product) {
     return (
@@ -243,6 +250,7 @@ const ProductDetail: React.FC = () => {
           <div className="flex text-center justify-between mb-10">
             <Link
               to="/pay"
+              state={state}
               className="w-1/3 border-2 bg-yellow-300 border-black p-6 rounded-xl"
             >
               <div>결제하기</div>
