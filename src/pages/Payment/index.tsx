@@ -1,3 +1,4 @@
+import OrderForm from "@components/Order/order";
 import { RequestPayParams, RequestPayResponse } from "@hooks/imp";
 import React from "react";
 
@@ -40,12 +41,21 @@ function Payment() {
   }
 
   return (
-    <button
-      onClick={onClickPayment}
-      className=" my-20 border-2 border-black p-6 rounded-xl"
-    >
-      결제하기
-    </button>
+    <div className="mt-20">
+      <div className="lg:w-2/3 lg:mx-auto xl:w-2/3 xl:mx-auto">
+        <div>
+          <div>
+            <OrderForm />
+          </div>
+        </div>
+        <button
+          onClick={onClickPayment}
+          className=" my-20 border-2 border-black p-6 rounded-xl"
+        >
+          결제하기
+        </button>
+      </div>
+    </div>
   );
 }
 

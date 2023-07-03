@@ -54,7 +54,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         </li>
 
         <li className="my-8">
-          <Link to="#">구매하기</Link>
+          <Link to="/product">구매하기</Link>
         </li>
         <li className="my-8">
           <Link to="#">정기배송신청하기</Link>
