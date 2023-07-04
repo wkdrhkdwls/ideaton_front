@@ -1,5 +1,5 @@
 import React from "react";
-import kakao_login from "@assets/kakao_login.png";
+import kakao_login from "@assets/login/kakao_login.png";
 
 const kakaoLogin = () => {
   const REST_API_KEY = `${process.env.REACT_APP_REST_API_KEY}`;

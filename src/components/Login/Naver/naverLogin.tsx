@@ -1,4 +1,4 @@
-import naver_login from "@assets/naver_login.png";
+import naver_login from "@assets/login/naver_login.png";
 
 const naverLogin = () => {
   return (
