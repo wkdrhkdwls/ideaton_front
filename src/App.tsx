@@ -11,6 +11,7 @@ const Product = loadable(() => import("@pages/Product"));
 const Auth = loadable(() => import("@pages/Auth"));
 const ProductDetail = loadable(() => import("@pages/ProductDetail"));
 const Payment = loadable(() => import("@pages/Payment"));
+const MonthMaterial = loadable(() => import("@pages/Month"));
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path="/product/:id" element={<ProductDetail />} />
       <Route path="/pay" element={<Payment />} />
       <Route path="/auth" element={<Auth />} />
+      <Route path="/material" element={<MonthMaterial />} />
     </Routes>
     // </Layout>
   );
