@@ -1,5 +1,6 @@
 import React from "react";
 import kakao_login from "@assets/login/kakao_login.png";
+import { Link } from "react-router-dom";
 
 const kakaoLogin = () => {
   const REST_API_KEY = `${process.env.REACT_APP_REST_API_KEY}`;
@@ -17,6 +18,7 @@ const kakaoLogin = () => {
       <button onClick={loginHandler} className=" sm:w-4/5 mx-auto flex">
         <img src={kakao_login} alt="kakao_login" />
       </button>
+      <Link to="/abc">ㅋㅋ</Link>
     </>
   );
 };
