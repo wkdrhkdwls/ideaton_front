@@ -6,7 +6,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const toggleSide = () => {
-    setIsSidebarOpen(true);
+    setIsSidebarOpen(!isSidebarOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
