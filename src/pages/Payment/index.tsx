@@ -1,5 +1,15 @@
+import OrderForm from "@components/Order/order";
 import { RequestPayParams, RequestPayResponse } from "@hooks/imp";
 import React from "react";
+import { useLocation } from "react-router";
+
+interface PaymentProps {
+  quantity: number;
+  totalAmount: number;
+  productTitle: string | undefined;
+  img: any;
+  package: string | undefined;
+}
 
 function Payment() {
   const onClickPayment = () => {
@@ -38,14 +48,38 @@ function Payment() {
       alert(`결제 실패: ${error_msg}`);
     }
   }
-
+  const location = useLocation();
+  const state = location.state as PaymentProps;
+  console.log(state.quantity, state.totalAmount, state.productTitle);
   return (
-    <button
-      onClick={onClickPayment}
-      className=" my-20 border-2 border-black p-6 rounded-xl"
-    >
-      결제하기
-    </button>
+    <div className="mt-20">
+      <div className="lg:w-2/3 lg:mx-auto xl:w-2/3 xl:mx-auto">
+        <div className="flex flex-row h-screen mt-40  sm:mx-3 md:mx-4 lg:mt-20 xl:mt-40">
+          <div className="w-full sm:w-1/2 sm:mb-10 md:mb-1 md:w-[450px] lg:w-[550px] lg:mr-20 xl:w-[600px] xl:mr-20">
+            <img src={state.img} alt={state.img} />
+          </div>
+          <div className="flex flex-col mt-8 sm:mt-0 sm:mx-2">
+            <span>{state.productTitle}</span>
+            <span>포장 :{state.package}</span>
+            <span>수량 :{state.quantity}</span>
+            <span>{state.totalAmount}원</span>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              <OrderForm />
+            </div>
+          </div>
+          <button
+            onClick={onClickPayment}
+            className=" my-20 border-2 border-black p-6 rounded-xl"
+          >
+            결제하기
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 

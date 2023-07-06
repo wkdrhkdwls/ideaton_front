@@ -31,4 +31,17 @@ const useProductDetail = [
   },
 ];
 
+export const PackageSales = {
+  gift: 3000,
+  eco: 0,
+};
+
+export const CouponSales = [
+  { name: "1번 쿠폰", percent: 1 },
+  { name: "2번 쿠폰", percent: 5 },
+  { name: "3번 쿠폰", percent: 10 },
+  { name: "4번 쿠폰", percent: 15 },
+  { name: "5번 쿠폰", percent: 20 },
+];
+
 export default useProductDetail;
