@@ -8,25 +8,28 @@ const useProductDetail = [
     id: 1,
     img: Img1,
     title: "진경옥 15ml * 30",
-    description: "시간과 전통의 가치를 담아 삶에 건강을 더하다",
+    description: [
+      "엄선된 국내산 원료와 알타이 지방의 녹용 ",
+      "120시간 전통을 지키는 공법으로 건강을 선물합니다.",
+    ],
     price: 20000,
   },
   {
     id: 2,
     img: Img2,
-    description: "2번 상품입니다.",
+    description: ["2번 상품입니다."],
     price: 50200,
   },
   {
     id: 3,
     img: Img3,
-    description: "3번 상품입니다.",
+    description: ["3번 상품입니다."],
     price: 14000,
   },
   {
     id: 4,
     img: Img4,
-    description: "4번 상품입니다.",
+    description: ["4번 상품입니다."],
     price: 112310,
   },
 ];
