@@ -1,4 +1,4 @@
-import dummy, { CouponSales, PackageSales } from "../../dummy";
+import dummy, { CouponSales } from "../../dummy";
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import CarouselComponent from "@components/Carousel/carouselComponent";
@@ -10,7 +10,6 @@ interface PaymentState {
   totalAmount: number;
   productTitle: string | undefined;
   img: any;
-  package: string | undefined;
 }
 
 const ProductDetail: React.FC = () => {
@@ -25,7 +24,7 @@ const ProductDetail: React.FC = () => {
     Array<{ name: string; percent: number }>
   >([]);
   const [totalDiscount, setTotalDiscount] = useState<number>(0);
-  const [selectedPackage, setSelectedPackage] = useState<string>("eco");
+  const [additionalValue, setAdditionalValue] = useState<number>(0);
 
   const productId: number = parseInt(id || "", 10);
   const product = dummy.find((data) => data.id === productId) || {
@@ -74,6 +73,16 @@ const ProductDetail: React.FC = () => {
     setQuantity(quantity + 1);
   };
 
+  const increaseValue = () => {
+    setAdditionalValue(additionalValue + 3000);
+  };
+
+  const decreaseValue = () => {
+    if (additionalValue >= 3000) {
+      setAdditionalValue(additionalValue - 3000);
+    }
+  };
+
   const handleCouponSelection = (coupon: {
     name: string;
     percent: number;
@@ -98,20 +107,17 @@ const ProductDetail: React.FC = () => {
 
     setShowDiscountOptions(false);
   };
-  const handlePackageSelection = (packageType: string) => {
-    setSelectedPackage(packageType);
-  };
 
   const totalAmount =
     quantity * product.price +
-    (selectedPackage === "gift" ? PackageSales.gift : PackageSales.eco) -
+    additionalValue -
     product.price * 0.01 * totalDiscount;
   // 값을 넘겨주는것은 아래 state에다가 추가하면된다.
   const state: PaymentState = {
     img: product.img,
     productTitle: product.title,
     quantity: quantity,
-    package: selectedPackage,
+
     totalAmount: totalAmount,
   };
 
@@ -176,30 +182,6 @@ const ProductDetail: React.FC = () => {
                 </div>
                 {/* 수량 */}
                 <div>
-                  <div className="flex justify-between mb-10">
-                    <button
-                      onClick={() => handlePackageSelection("gift")}
-                      className="w-5/8 border-2 border-black p-6 rounded-xl"
-                    >
-                      <div className="flex justify-between text-base">
-                        <span>선물포장</span>
-                        {/* 선물포장 가격이 들어갈 것 */}
-                        <span>+{PackageSales.gift}원</span>
-                        {/* 선물포장 가격이 들어갈 것 */}
-                      </div>
-                    </button>
-                    <button
-                      onClick={() => handlePackageSelection("eco")}
-                      className="w-5/8 border-2 border-black p-6 rounded-xl"
-                    >
-                      <div className="flex justify-between">
-                        <span>에코포장</span>
-                        {/* 선물포장 가격이 들어갈 것 */}
-                        <span>+{PackageSales.eco}원</span>
-                        {/* 선물포장 가격이 들어갈 것 */}
-                      </div>
-                    </button>
-                  </div>
                   <div>
                     <div className="mb-10">
                       <button
@@ -263,17 +245,7 @@ const ProductDetail: React.FC = () => {
                         <p>{quantity * product.price}원</p>
                       </div>
                     </div>
-                    <div className="flex justify-between">
-                      <span>포장</span>
-                      <div className="flex flex-row gap-1">
-                        <p>
-                          {selectedPackage === "gift"
-                            ? `+${PackageSales.gift}`
-                            : `+${PackageSales.eco}`}{" "}
-                          원
-                        </p>
-                      </div>
-                    </div>
+
                     <div className="flex justify-between">
                       <span>할인혜택</span>
                       <div className="flex flex-row gap-1">
