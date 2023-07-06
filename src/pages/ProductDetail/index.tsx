@@ -126,7 +126,7 @@ const ProductDetail: React.FC = () => {
   return (
     <Layout>
       <div>
-        <div className="lg:w-2/3 lg:mx-auto xl:w-2/3 xl:mx-auto">
+        <div className="">
           <div className="relative w-full flex flex-row sm:flex-col md:flex-col my-40 lg:mt-20 xl:mt-40 sm:items-center md:items-center">
             <div>
               <CarouselComponent

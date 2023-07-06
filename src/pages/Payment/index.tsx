@@ -52,7 +52,7 @@ function Payment() {
   const state = location.state as PaymentProps;
   console.log(state.quantity, state.totalAmount, state.productTitle);
   return (
-    <div className="mt-20">
+    <div>
       <div className="lg:w-2/3 lg:mx-auto xl:w-2/3 xl:mx-auto">
         <div className="flex flex-row h-screen mt-40  sm:mx-3 md:mx-4 lg:mt-20 xl:mt-40">
           <div className="w-full sm:w-1/2 sm:mb-10 md:mb-1 md:w-[450px] lg:w-[550px] lg:mr-20 xl:w-[600px] xl:mr-20">
