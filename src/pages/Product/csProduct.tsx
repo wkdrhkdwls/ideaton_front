@@ -1,8 +1,8 @@
 import Layout from "@components/Layout/layout";
-import dummy from "../../dummy";
+import dummy from "@hooks/csDummy";
 import { Link } from "react-router-dom";
 
-const Product = () => {
+const CsProductPage = () => {
   return (
     <Layout>
       <div>
@@ -10,7 +10,7 @@ const Product = () => {
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-10">
             {dummy.map((data) => (
               <div key={data.id}>
-                <Link to={`/product/${data.id}`}>
+                <Link to={`/cmproduct/${data.id}`}>
                   <img src={data.img} alt={data.img} />
                 </Link>
                 <div className="flex items-center flex-col">
@@ -27,4 +27,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default CsProductPage;

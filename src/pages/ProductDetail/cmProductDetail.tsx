@@ -1,4 +1,4 @@
-import dummy, { CouponSales } from "../../dummy";
+import dummy, { CouponSales } from "../../hooks/cmDummy";
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import CarouselComponent from "@components/Carousel/carouselComponent";
@@ -12,7 +12,7 @@ interface PaymentState {
   img: any;
 }
 
-const ProductDetail: React.FC = () => {
+const CmProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [currentIndex, setCurrentIndex] = useState<number | undefined>(
     undefined
@@ -282,4 +282,4 @@ const ProductDetail: React.FC = () => {
   );
 };
 
-export default ProductDetail;
+export default CmProductDetail;

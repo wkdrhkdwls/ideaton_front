@@ -7,7 +7,7 @@ const useProductDetail = [
   {
     id: 1,
     img: Img1,
-    title: "진경옥 15ml * 30",
+    title: "zaaaaaaa",
     description: [
       "엄선된 국내산 원료와 알타이 지방의 녹용 ",
       "120시간 전통을 지키는 공법으로 건강을 선물합니다.",
