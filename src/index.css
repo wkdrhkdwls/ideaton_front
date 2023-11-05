@@ -5,6 +5,7 @@
 body {
   background-color: white;
   font-family: "EASTAR";
+  -ms-overflow-style: none;
 }
 
 @keyframes fadeIn {
@@ -24,6 +25,10 @@ body {
   font-family: "EASTAR";
   font-weight: 200;
   src: url("./assets/fonts/EASTARJET-Medium.ttf") format("truetype");
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 /* body {
   margin: 0;
