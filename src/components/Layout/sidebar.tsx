@@ -31,11 +31,11 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
     <div
       id="sidebar"
       ref={outside}
-      className={`z-5 px-12 border-l-2 border-white bg-gray-800 h-full right-0 top-0 fixed transition-transform duration-500 ease-in-out ${
+      className={`z-5 px-12 border-l-2 bg-none h-full right-0 top-0 fixed transition-transform duration-500 ease-in-out ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
-      <div className="absolute left-0 p-4">
+      {/* <div className="absolute left-0 p-4">
         <FaTimes
           className="cursor-pointer"
           size={32}
@@ -43,9 +43,9 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
           onClick={toggleSide}
           onKeyDown={toggleSide}
         />
-      </div>
+      </div> */}
 
-      <ul className="text-center font-bold text-white mt-20 sm:text-[8px]">
+      <ul className="text-center font-bold text-red-400 mt-20 sm:text-[8px]">
         <li className="my-8">
           <Link to="/login">로그인</Link>
         </li>
@@ -54,17 +54,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         </li>
 
         <li className="my-8">
-          <Link to="/product">구매하기</Link>
-        </li>
-        <li className="my-8">
-          <Link to="#">정기배송신청하기</Link>
-        </li>
-        <li className="my-8">
-          <Link to="/material">이달의원료</Link>
-        </li>
-
-        <li className="my-8">
-          <Link to="#">EVENT</Link>
+          <Link to="/product">기증</Link>
         </li>
       </ul>
     </div>

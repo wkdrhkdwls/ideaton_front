@@ -4,10 +4,8 @@ import "fullpage.js/dist/jquery.fullpage.min.css";
 import sea from "@assets/fullpage/sea.mp4";
 import grape from "@assets/fullpage/grape.mp4";
 import food from "@assets/fullpage/food.mp4";
-import Footer from "@components/Layout/footer";
-import Header from "@components/Layout/header";
 
-// import FullpageSection from "@components/Fullpage/fullpageSection";
+import Header from "@components/Layout/header";
 
 const Home = () => {
   const videos = [sea, grape, food];
@@ -15,7 +13,7 @@ const Home = () => {
   $(() => {
     $("#fullpage").fullpage({
       menu: "#menu",
-      anchors: ["1", "2", "3", "footer"],
+      anchors: ["1", "2", "3", "4"],
       sectionsColor: ["black", "black", "black", "white"],
     });
   });
@@ -24,7 +22,7 @@ const Home = () => {
     <>
       <Header />
       <div id="fullpage">
-        {videos.map((video, index) => (
+        {/* {videos.map((video, index) => (
           <div className="section" id={`#section${index}`}>
             <video
               className="h-full w-full object-cover"
@@ -35,10 +33,7 @@ const Home = () => {
               <source data-src={video} type="video/mp4" />
             </video>
           </div>
-        ))}
-        <div className="section fp-auto-height" id="#section4">
-          <Footer />
-        </div>
+        ))} */}
       </div>
     </>
   );

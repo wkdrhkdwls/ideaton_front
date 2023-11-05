@@ -60,23 +60,22 @@ function Payment() {
           </div>
           <div className="flex flex-col mt-8 sm:mt-0 sm:mx-2">
             <span>{state.productTitle}</span>
-            <span>포장 :{state.package}</span>
             <span>수량 :{state.quantity}</span>
             <span>{state.totalAmount}원</span>
           </div>
         </div>
+        <button
+          onClick={onClickPayment}
+          className="bg-yellow-500 my-20 border-2 border-black p-6 rounded-xl"
+        >
+          결제하기
+        </button>
+      </div>
+      <div>
         <div>
           <div>
-            <div>
-              <OrderForm />
-            </div>
+            <OrderForm />
           </div>
-          <button
-            onClick={onClickPayment}
-            className=" my-20 border-2 border-black p-6 rounded-xl"
-          >
-            결제하기
-          </button>
         </div>
       </div>
     </div>

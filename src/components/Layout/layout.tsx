@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <main className="mt-20 lg:w-2/3 lg:mx-auto xl:w-2/3 xl:mx-auto">
         {children}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

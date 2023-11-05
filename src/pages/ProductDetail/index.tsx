@@ -48,13 +48,15 @@ const ProductDetail: React.FC = () => {
   }
   useEffect(() => {
     function watchScroll() {
-      boxRef.current.addEventListener("scroll", logit);
+      const scrollBox = boxRef.current;
+      scrollBox.addEventListener("scroll", logit);
+
+      return () => {
+        scrollBox.removeEventListener("scroll", logit);
+      };
     }
     watchScroll();
-    return () => {
-      boxRef.current.removeEventListener("scroll", logit);
-    };
-  });
+  }, []);
 
   function handleChange(index: number) {
     setCurrentIndex(index);
