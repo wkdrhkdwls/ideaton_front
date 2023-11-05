@@ -1,7 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export const content = ["./src/**/*.{js,jsx,ts,tsx}"];
 export const theme = {
-  extend: {},
+  extend: {
+    animation: {
+      fadeIn: "fadeIn 2s ease-in forwards",
+    },
+    keyframes: {
+      fadeIn: {
+        "0%": { opacity: 0, transform: "translateX(-50px)" },
+        "100%": { opacity: 1, transform: "translateX(0)" },
+      },
+    },
+  },
   screens: {
     xs: { min: "0px", max: "350px" },
     sm: { min: "350px", max: "720px" },
