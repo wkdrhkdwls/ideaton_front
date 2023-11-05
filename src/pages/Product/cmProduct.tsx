@@ -1,12 +1,14 @@
 import Layout from "@components/Layout/layout";
 import dummy from "../../hooks/cmDummy";
 import { Link } from "react-router-dom";
+import Banner from "@assets/cukMade/CmBanner.png";
 
 const CmProductPage = () => {
   return (
     <Layout>
       <div>
-        <div className="flex justify-center items-center h-screen">
+        <img className="w-full mb-10" src={Banner} alt="Banner" />
+        <div className="flex justify-center items-center ">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-10">
             {dummy.map((data) => (
               <div key={data.id}>

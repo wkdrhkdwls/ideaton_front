@@ -1,36 +1,52 @@
-const Img1 = require("@assets/1.png");
-const Img2 = require("@assets/2.png");
-const Img3 = require("@assets/3.png");
-const Img4 = require("@assets/4.jpg");
+const Img1 = require("@assets/cukShare/1.jpg");
+const Img2 = require("@assets/cukShare/2.jpg");
+const Img3 = require("@assets/1.png");
+const Img4 = require("@assets/2.png");
+const Img5 = require("@assets/3.png");
+const Img6 = require("@assets/4.jpg");
 
 const useProductDetail = [
   {
     id: 1,
     img: Img1,
-    title: "CS입니다.",
-    description: [
-      "엄선된 국내산 원료와 알타이 지방의 녹용 ",
-      "120시간 전통을 지키는 공법으로 건강을 선물합니다.",
-    ],
-    price: 20000,
+    title: "수제비 정처기 실기",
+    description: [""],
+    price: 0,
   },
   {
     id: 2,
     img: Img2,
-    description: ["2번 상품입니다."],
-    price: 50200,
+    title: "칼하트 백팩",
+    description: [""],
+    price: 0,
   },
   {
     id: 3,
     img: Img3,
-    description: ["3번 상품입니다."],
-    price: 14000,
+    title: "노트북",
+    description: [""],
+    price: 0,
   },
   {
     id: 4,
     img: Img4,
-    description: ["4번 상품입니다."],
-    price: 112310,
+    title: "당근",
+    description: [""],
+    price: 0,
+  },
+  {
+    id: 5,
+    img: Img5,
+    title: "토끼",
+    description: [""],
+    price: 0,
+  },
+  {
+    id: 6,
+    img: Img6,
+    title: "ㅈㄱㅈㄱ",
+    description: [""],
+    price: 0,
   },
 ];
 

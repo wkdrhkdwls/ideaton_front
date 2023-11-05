@@ -133,13 +133,14 @@ const CbProductDetail: React.FC = () => {
 
   return (
     <Layout>
-      <div>
+      <div className="sm:h-screen">
         <div className="">
           <div className="relative w-full flex flex-row sm:flex-col md:flex-col my-40 lg:mt-20 xl:mt-40 sm:items-center md:items-center">
-            <div>
-              <CarouselComponent
-                currentIndex={currentIndex}
-                handleChange={handleChange}
+            <div className="mr-10 sm:mr-0">
+              <img
+                className="w-[800px] h-full sm:w-full sm:h-full"
+                src={product.img}
+                alt={product.img}
               />
             </div>
             <div

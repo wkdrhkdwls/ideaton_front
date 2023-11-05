@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useRef, useEffect } from "react";
 import Logo from "@assets/cukMade/cukMadeLogo.png";
 
 const MadePage = () => {
@@ -22,7 +23,7 @@ const MadePage = () => {
               tempus ultrices, purus eros blandit nunc, ut mollis dui sapien
               commodo arcu.
             </p>
-            <div className="flex justify-center items-center p-6 bg-yellow-300 w-40">
+            <div className="flex justify-center items-center p-6 bg-yellow-300 w-40 rounded-3xl">
               <Link to="/cmproduct">자세히 보기</Link>
             </div>
           </div>

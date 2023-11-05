@@ -133,13 +133,14 @@ const CsProductDetail: React.FC = () => {
 
   return (
     <Layout>
-      <div>
+      <div className="sm:h-[300vh]">
         <div className="">
           <div className="relative w-full flex flex-row sm:flex-col md:flex-col my-40 lg:mt-20 xl:mt-40 sm:items-center md:items-center">
-            <div>
-              <CarouselComponent
-                currentIndex={currentIndex}
-                handleChange={handleChange}
+            <div className="mr-10 sm:mr-0">
+              <img
+                className="w-[800px] h-full sm:w-full sm:h-full"
+                src={product.img}
+                alt={product.img}
               />
             </div>
             <div
@@ -257,19 +258,13 @@ const CsProductDetail: React.FC = () => {
                     </div>
                   </div>
                   <p className="text-right">총액 : {totalAmount}</p>
-                  <div className="flex text-center justify-between mb-10">
+                  <div className="flex text-center justify-center mb-10">
                     <Link
                       to="/pay"
                       state={state}
-                      className="w-1/3 border-2 bg-yellow-300 border-black p-6 rounded-xl"
+                      className="w-1/3  border-2 bg-yellow-300 border-black p-6 rounded-xl"
                     >
-                      <div>결제하기</div>
-                    </Link>
-                    <Link
-                      to="#"
-                      className="w-1/3 border-2 border-black p-6 rounded-xl"
-                    >
-                      <div>장바구니</div>
+                      <div className="">나눔 신청하기</div>
                     </Link>
                   </div>
                 </div>

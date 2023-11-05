@@ -6,15 +6,23 @@ import IntroPage from "@components/Intro";
 import Header from "@components/Layout/header";
 import MadePage from "@components/Made";
 import SharePage from "@components/Share";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  $(() => {
+  useEffect(() => {
     $("#fullpage").fullpage({
       menu: "#menu",
       anchors: ["", "", "", ""],
       sectionsColor: ["white", "white", "white", "white"],
     });
-  });
+
+    return () => {
+      if ($.fn.fullpage.destroy) {
+        $.fn.fullpage.destroy("all");
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -26,11 +34,10 @@ const Home = () => {
         <div className="section" id={`#section2`}>
           <MadePage />
         </div>
-        <div className="section" id={`#section2`}>
+        <div className="section" id={`#section3`}>
           <Business />
         </div>
-
-        <div className="section" id={`#section2`}>
+        <div className="section" id={`#section4`}>
           <SharePage />
         </div>
       </div>
