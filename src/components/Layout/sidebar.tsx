@@ -52,10 +52,6 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         <li className="my-8">
           <Link to="/signup">회원가입</Link>
         </li>
-
-        <li className="my-8">
-          <Link to="/product">기증</Link>
-        </li>
       </ul>
     </div>
   );

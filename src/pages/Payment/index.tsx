@@ -1,3 +1,4 @@
+import Layout from "@components/Layout/layout";
 import OrderForm from "@components/Order/order";
 import { RequestPayParams, RequestPayResponse } from "@hooks/imp";
 import React from "react";
@@ -52,33 +53,29 @@ function Payment() {
   const state = location.state as PaymentProps;
   console.log(state.quantity, state.totalAmount, state.productTitle);
   return (
-    <div>
-      <div className="lg:w-2/3 lg:mx-auto xl:w-2/3 xl:mx-auto">
-        <div className="flex flex-row h-screen mt-40  sm:mx-3 md:mx-4 lg:mt-20 xl:mt-40">
-          <div className="w-full sm:w-1/2 sm:mb-10 md:mb-1 md:w-[450px] lg:w-[550px] lg:mr-20 xl:w-[600px] xl:mr-20">
-            <img src={state.img} alt={state.img} />
-          </div>
-          <div className="flex flex-col mt-8 sm:mt-0 sm:mx-2">
-            <span>{state.productTitle}</span>
-            <span>수량 :{state.quantity}</span>
-            <span>{state.totalAmount}원</span>
-          </div>
-        </div>
-        <button
-          onClick={onClickPayment}
-          className="bg-yellow-500 my-20 border-2 border-black p-6 rounded-xl"
-        >
-          결제하기
-        </button>
-      </div>
+    <Layout>
       <div>
-        <div>
-          <div>
-            <OrderForm />
+        <div className="lg:w-2/3 lg:mx-auto xl:w-2/3 xl:mx-auto">
+          <div className="flex flex-row h-screen mt-40  sm:mx-3 md:mx-4 lg:mt-20 xl:mt-40">
+            <div className="w-full sm:w-1/2 sm:mb-10 md:mb-1 md:w-[450px] lg:w-[550px] lg:mr-20 xl:w-[600px] xl:mr-20">
+              <img src={state.img} alt={state.img} />
+            </div>
+            <div className="flex flex-col my-10 gap-5 sm:mt-0 sm:mx-2">
+              <span className="text-xl">{state.productTitle}</span>
+              <span className="text-xl">수량 : {state.quantity}</span>
+              <span className="text-xl">가격 : {state.totalAmount}원</span>
+              <OrderForm />
+              <button
+                onClick={onClickPayment}
+                className="bg-yellow-500 my-20 border-2 border-black p-6 rounded-xl"
+              >
+                결제하기
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 

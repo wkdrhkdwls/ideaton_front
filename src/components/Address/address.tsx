@@ -28,6 +28,7 @@ const AddressForm = (props: any) => {
 
     props.onClose(); // Close the popup after address selection
   };
+
   const handleClose = () => {
     props.onClose();
   };
@@ -44,7 +45,7 @@ const AddressForm = (props: any) => {
             <FaTimes />
           </button>
         </div>
-        <DaumPostcode autoClose onComplete={complete} />
+        <DaumPostcode autoClose={true} onComplete={complete} />
       </div>
     </div>
   );
