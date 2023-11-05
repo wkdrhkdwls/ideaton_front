@@ -1,9 +1,9 @@
 const Img1 = require("@assets/cukShare/1.jpg");
 const Img2 = require("@assets/cukShare/2.jpg");
-const Img3 = require("@assets/1.png");
-const Img4 = require("@assets/2.png");
+const Img3 = require("@assets/cukShare/3.jpg");
+const Img4 = require("@assets/cukShare/4.jpg");
 const Img5 = require("@assets/3.png");
-const Img6 = require("@assets/4.jpg");
+const Img6 = require("@assets/cukShare/6.jpg");
 
 const useProductDetail = [
   {
@@ -44,7 +44,7 @@ const useProductDetail = [
   {
     id: 6,
     img: Img6,
-    title: "ㅈㄱㅈㄱ",
+    title: "앨범커버",
     description: [""],
     price: 0,
   },
