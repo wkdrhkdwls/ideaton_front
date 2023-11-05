@@ -1,6 +1,5 @@
 import Layout from "@components/Layout/layout";
 import dummy from "@hooks/cbDummy";
-import { Link } from "react-router-dom";
 import Banner from "@assets/CBucheo/CbBanner.png";
 
 const CbProductPage = () => {
@@ -17,7 +16,6 @@ const CbProductPage = () => {
                 <div className="flex items-center flex-col">
                   <p>{data.title}</p>
                   <p>{data.description}</p>
-                  <p>{data.price}원</p>
                 </div>
               </div>
             ))}

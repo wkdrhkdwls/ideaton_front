@@ -1,36 +1,28 @@
-const Img1 = require("@assets/1.png");
-const Img2 = require("@assets/2.png");
-const Img3 = require("@assets/3.png");
-const Img4 = require("@assets/4.jpg");
+const Img1 = require("@assets/CBucheo/1.jpg");
+const Img2 = require("@assets/CBucheo/2.jpg");
+const Img3 = require("@assets/CBucheo/3.jpg");
 
 const useProductDetail = [
   {
     id: 1,
     img: Img1,
-    title: "CB아이템",
-    description: [
-      "엄선된 국내산 원료와 알타이 지방의 녹용 ",
-      "120시간 전통을 지키는 공법으로 건강을 선물합니다.",
-    ],
+    title: "덕분애",
+    description: ["제로웨이스트 생활용품점"],
     price: 20000,
   },
   {
     id: 2,
     img: Img2,
-    description: ["2번 상품입니다."],
+    title: "지구샵",
+    description: ["제로웨이스트 생활용품점"],
     price: 50200,
   },
   {
     id: 3,
     img: Img3,
-    description: ["3번 상품입니다."],
+    title: "제로마켓",
+    description: ["제로웨이스트 매장"],
     price: 14000,
-  },
-  {
-    id: 4,
-    img: Img4,
-    description: ["4번 상품입니다."],
-    price: 112310,
   },
 ];
 
