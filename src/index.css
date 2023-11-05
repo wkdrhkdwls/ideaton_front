@@ -4,6 +4,7 @@
 
 body {
   background-color: white;
+  font-family: "EASTAR";
 }
 
 @keyframes fadeIn {
@@ -19,6 +20,11 @@ body {
   animation: fadeIn 1s linear;
 }
 
+@font-face {
+  font-family: "EASTAR";
+  font-weight: 200;
+  src: url("./assets/fonts/EASTARJET-Medium.ttf") format("truetype");
+}
 /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
