@@ -11,11 +11,15 @@ const CmProductPage = () => {
             {dummy.map((data) => (
               <div key={data.id}>
                 <Link to={`/cmproduct/${data.id}`}>
-                  <img src={data.img} alt={data.img} />
+                  <img
+                    className="w-[400px] h-[300px] sm:w-[150px] sm:h-[150px]"
+                    src={data.img}
+                    alt={data.img}
+                  />
                 </Link>
                 <div className="flex items-center flex-col">
                   <p>{data.title}</p>
-                  <p>{data.description}</p>
+                  {/* <p>{data.description}</p> */}
                   <p>{data.price}원</p>
                 </div>
               </div>

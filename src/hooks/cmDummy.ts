@@ -1,36 +1,49 @@
-const Img1 = require("@assets/1.png");
-const Img2 = require("@assets/2.png");
-const Img3 = require("@assets/3.png");
-const Img4 = require("@assets/4.jpg");
+const Img1 = require("@assets/cukMade/1.png");
+const Img2 = require("@assets/cukMade/2.png");
+const Img3 = require("@assets/cukMade/3.png");
+const Img4 = require("@assets/cukMade/4.png");
 
 const useProductDetail = [
   {
     id: 1,
     img: Img1,
-    title: "zaaaaaaa",
-    description: [
-      "엄선된 국내산 원료와 알타이 지방의 녹용 ",
-      "120시간 전통을 지키는 공법으로 건강을 선물합니다.",
-    ],
-    price: 20000,
+    title: "구슬 그립톡",
+    description: ["직접 제작"],
+    price: 8000,
   },
   {
     id: 2,
     img: Img2,
-    description: ["2번 상품입니다."],
-    price: 50200,
+    title: "리코그린 998 텀블러",
+    description: [
+      "'리코그린' : Recovery + Green",
+      "'998' : 현재 원두의 99.8%가 커피박(커피찌꺼기)으로 폐기되고 있습니다.",
+      "컵과 빨대 모두 100% 친환경 소재",
+      "튼튼한 내구성과 깨질 위험, 음료 누출 위험 X",
+      "텀블러 세척기, 식기세척기로 간편 세척가능",
+      "다양한 음료 섭취를 위한 빨대 판매(세척솔 동봉)",
+      "버려지는 원두 포대 자루를 수선하여 슬리브 제작",
+    ],
+    price: 9900,
   },
   {
     id: 3,
     img: Img3,
-    description: ["3번 상품입니다."],
-    price: 14000,
+    title: "독희의 애착인형 키링",
+    description: ["애착인형 키링"],
+    price: 12000,
   },
   {
     id: 4,
     img: Img4,
-    description: ["4번 상품입니다."],
-    price: 112310,
+    title: "쿠키",
+    description: [
+      "🍪누네띠네쿠키: 1500원",
+      "🍪 초코칩쿠키: 1800원",
+      "🍪 레드벨벳쿠키: 2000원",
+      "🍪 초코나무숲쿠키: 2000원",
+    ],
+    price: 10000,
   },
 ];
 
