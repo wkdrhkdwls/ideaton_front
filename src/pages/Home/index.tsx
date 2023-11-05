@@ -11,7 +11,7 @@ const Home = () => {
   $(() => {
     $("#fullpage").fullpage({
       menu: "#menu",
-      anchors: ["main", "cm", "cb", "cs"],
+      anchors: ["", "", "", ""],
       sectionsColor: ["white", "white", "white", "white"],
     });
   });
