@@ -21,7 +21,7 @@ const Header = () => {
         <button
           onClick={toggleSide}
           type="button"
-          className="sm:hidden inline-flex items-center p-2 ml-3 text-sm text-black rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200"
+          className="sm:hidden md:hidden inline-flex items-center p-2 ml-3 text-sm text-black rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="navbar-hamburger"
           aria-expanded={isMenuOpen ? "true" : "false"}
         >

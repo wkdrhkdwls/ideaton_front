@@ -18,13 +18,13 @@ const SharePage = () => {
               사람이 의미있게 사용했으면 하는 따뜻한 그 마음’, 씨리얼라이즈는 잘
               알고 있습니다. 학교 내 따뜻한 녹색 소비 문화를 함께 만들어봐요
             </p>
-            <div className="flex justify-center items-center p-6 bg-yellow-300 w-40 rounded-3xl">
-              <Link to="/csproduct">
+            <Link to="/csproduct">
+              <div className="flex justify-center items-center p-6 bg-yellow-300 w-40 rounded-3xl">
                 <button className="flex justify-center items-center">
                   자세히 보기
                 </button>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
